@@ -33,15 +33,15 @@ Game.Enemy = require("enemy")
 function Game.Map.isSolid(pID)
     for l=1,Game.Map.MAP_HEIGHT do
         for c=1,Game.Map.MAP_WIDTH do
-          local id = Game.Map.Grid[l][c]
-          if id ~= nil then
-            if id == 3 then
-                return true
+        local id = Game.Map.Grid[l][c]
+            if id ~= nil then
+                if id == 3 then
+                    return true
+                end
+                return false
             end
-          return false
         end
-      end   
-    end
+    end   
 end
 
 function Game.Load()
