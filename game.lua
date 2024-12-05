@@ -58,19 +58,19 @@ end
 
 function Game.Draw()
     love.graphics.scale(4,4)
-  local c,l
+    local c,l
   
-  for l=1,Game.Map.MAP_HEIGHT do
-    for c=1,Game.Map.MAP_WIDTH do
-      local id = Game.Map.Grid[l][c]
-      local tex = Game.TileTextures[id]
-      if tex ~= nil then
-        love.graphics.draw(tex, (c-1)*Game.Map.TILE_WIDTH, (l-1)*Game.Map.TILE_HEIGHT)
-      end
+    for l=1,Game.Map.MAP_HEIGHT do
+        for c=1,Game.Map.MAP_WIDTH do
+        local id = Game.Map.Grid[l][c]
+        local tex = Game.TileTextures[id]
+        if tex ~= nil then
+            love.graphics.draw(tex, (c-1)*Game.Map.TILE_WIDTH, (l-1)*Game.Map.TILE_HEIGHT)
+        end
+        end
     end
-  end
-  Game.Hero.Draw(Game.Map)
-  Game.Enemy.Draw(Game.Map)
+    Game.Hero.Draw(Game.Map)
+    Game.Enemy.Draw(Game.Map)
 end
 
 
